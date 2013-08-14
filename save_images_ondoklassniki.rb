@@ -82,7 +82,7 @@ def save_images(img_arrayclass, photocl, photocl_index, album_title, classs)
     puts "Pictures in an gallery: "+ imgcount.to_s
     @ablum_title = @b.span(:class, album_title).text.gsub("\d","").gsub("\/"," ").gsub("?"," ").gsub(" ","_").gsub('"','').to_s[0..230]
     # @download_directory = "#{Dir.pwd}/"+@ablum_title.gsub(" ","_") #create download dirrectory TBU
-    @b.img(:class, "photo-sc_grid_img").click
+    @b.img(:class, "photo-sc_i_cnt_a_img").click 
       for j in 0..imgcount-1 do
         #sleep 1 until @b.img(:class, "plp_photo").exists?
         @b.img(:class, "plp_photo").wait_until_present
